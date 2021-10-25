@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+html {
+  background: rgb(175,103,233);
+  background: linear-gradient(180deg, rgba(175,103,233,1) 0%,
+             rgba(101,101,231,1) 100%, rgba(0,212,255,1) 100%);  
+}
+
+body {
+  height: 100vh;
+}
+
+.question, .answer {
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+summary.question {
+  line-height: 3rem;
+}
+
+p.answer {
+  margin-top: 0;
+}
+
+/* Added for the collapsable FAQ section: */
+details {
+  user-select: none;
+}
+
+details>summary span.arrow-down {
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+details[open] summary {
+  font-weight: bold;
+}
+
+details[open] summary span.arrow-down {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+/* End of collapsable FAQ section add on */
+
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 25px 50px 0px rgba(0,0,0,0.3); 
+  box-shadow: 0px 25px 50px 0px rgba(0,0,0,0.3);
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 62%;
+  width: 66%;
+
+  /* center the card:  */
+  margin: 0;
+  padding-right: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  /* border: 3px solid orangered; */
+}
+
+.cube-image {
+  /* center the cube:  */
+  margin-left: 0.27%;
+  position: absolute;
+  /* top: 58%; */
+  top: 17rem;
+  left: 0%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  /* border: 3px solid darkslategray; */
+}
+
+.cube-image img {
+  /* get rid of whitespace under image */
+  vertical-align: bottom;
+
+  /* border: 3px solid lightseagreen; */
+}
+
+.left {
+  display: inline;
+  float: left;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 50%;
+
+  /* border: 3px solid green; */
+}
+
+.woman-image {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom +38% right;
+
+  height: 100%;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-65%, -50%);
+  transform: translate(-65%, -50%);
+
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  /* border: 2px solid cyan; */
+}
+
+.woman-image img {
+  vertical-align: bottom;
+
+  /* border: 2px solid red; */
+}
+
+.image-mobile {
+  display: none;
+}
+
+.right {
+  display: inline;
+  float: right;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  padding: 2rem 5rem 2rem 2rem;
+  width: 50%;
+
+  /* border: 3px solid blue; */
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.right li {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+footer {
+  position: absolute;
+  bottom: .5rem;
+  width: 100%;
+
+  /* border: 1px solid green; */
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* switch to mobile design if the viewport becomes to narrow */
+@media only screen and (max-width: 1000px) {
+
+  .card {
+    display: block;
+    float: none;
+    height: 100%;
+    width: 86%;
+  
+    margin: 38% 6.5% 0%;
+    overflow: visible;
+    padding: 0;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    -ms-transform: none;
+    transform: none;
+  
+    /* border: 3px solid orangered; */
+  }
+
+  .cube-image {
+    display: none;
+  }
+
+  .left {
+    display: inline-block;
+    float: none;
+    height: auto;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    /* border: 3px solid seagreen; */
+  }
+
+  .woman-image {
+    background-image: url('images/bg-pattern-mobile.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;    
+
+    width: 80%;
+
+    /* reset values: */
+    top: auto;
+    left: auto;
+    -ms-transform: none;
+    transform: none;  
+
+    margin: 0 auto;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    -ms-transform: translate(0, -57%);
+    transform: translate(0, -57%);  
+
+    /* border: 3px solid cyan; */
+  }
+
+  .image-desktop {
+    display: none;
+  }
+
+  .image-mobile {
+    display: inline;
+  }
+
+  .right {
+    display: inline-block;
+    float: none;
+    height: 100%;
+    margin: 38% 6.5% 8%; 
+    overflow: auto;
+    padding: 8rem 0 0;
+    padding: 0;
+    position: relative;
+    width: 86%;
+
+    /* border: 3px solid blue; */
+  }
+
+  .faq {
+    text-align: center;
+  }
+
+}

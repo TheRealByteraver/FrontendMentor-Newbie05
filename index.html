@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 
+  desktop size = 1440x768
+
+    desktop background for image: images/bg-pattern-desktop.svg
+    mobile  background for image: images/bg-pattern-mobile.svg
+    little orange @ cube: images/illustration-box-desktop.svg
+    big desktop image of woman with computer on lila floor: images/illustration-woman-online-desktop.svg
+    big mobile image of orange @ cube and woman with computer on lila floor: images/illustration-woman-online-mobile.svg
+ -->
+
+ <!-- <div style="
+      color: black;
+      background-color: white;
+      display: block; 
+      height: 500px; 
+      width: 350px; 
+      border: 3px solid red; 
+      background-image: url('images/bg-pattern-mobile.svg');
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      margin-bottom: 500px;
+      "></div> -->
+
+  <main>
+    <div class="card">
+      <div class="cube-image">
+        <img src="images/illustration-box-desktop.svg" alt="orange cube">
+      </div>
+      <div class="left">
+        <div class="woman-image">
+          <img class="image-desktop" src="images/illustration-woman-online-desktop.svg" alt="woman online">
+          <img class="image-mobile" src="images/illustration-woman-online-mobile.svg" alt="woman online">
+        </div>
+      </div>
+      <div class="right">
+        <h1 class="faq">FAQ</h1>
+        <ul>
+          <li>
+            <details>
+              <summary class="question">
+                How many team members can I invite?
+                <span class="arrow-down">
+                  <img src="images/icon-arrow-down.svg" alt="">
+                </span>
+              </summary>
+              <p class="answer">
+                You can invite up to 2 additional users on the Free plan. 
+              There is no limit on team members for the Premium plan.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="question">
+                What is the maximum file upload size?
+                <span class="arrow-down">
+                  <img src="images/icon-arrow-down.svg" alt="">
+                </span>
+              </summary>
+              <p class="answer">
+                No more than 2GB. 
+                All files in your account must fit your allotted storage space.
+              </p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="question">
+                How do I reset my password?
+                <span class="arrow-down">
+                  <img src="images/icon-arrow-down.svg" alt="">
+                </span>
+              </summary>
+              <p class="answer">
+                Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.
+              </p>
+            </details>
+          </li>          
+          <li>
+            <details>
+              <summary class="question">
+                Can I cancel my subscription? 
+                <span class="arrow-down">
+                  <img src="images/icon-arrow-down.svg" alt="">
+                </span>
+              </summary>
+              <p class="answer">
+                Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </details>
+          </li>          
+          <li>
+            <details>
+              <summary class="question">
+                Do you provide additional support? 
+                <span class="arrow-down">
+                  <img src="images/icon-arrow-down.svg" alt="">
+                </span>
+              </summary>
+              <p class="answer">
+                Chat and email support is available 24/7. 
+                Phone lines are open during normal business hours.
+              </p>
+            </details>
+          </li>          
+        </ul>
+      </div> 
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Erland Van Olmen</a>.
+    </div>  
+  </footer>
+</body>
+</html>
